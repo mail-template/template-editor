@@ -1,22 +1,25 @@
 {
     "compilerOptions": {
-        "target": "ESNext",
+        "outDir": "dist",
+        "module": "esnext",
+        "target": "es5",
         "useDefineForClassFields": true,
-        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "sourceMap": true,
         "allowJs": false,
+        "jsx": "react-jsx",
+        "declaration": true,
+        "moduleResolution": "node",
+        "forceConsistentCasingInFileNames": true,
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
         "skipLibCheck": true,
         "esModuleInterop": false,
         "allowSyntheticDefaultImports": true,
         "strict": true,
-        "forceConsistentCasingInFileNames": true,
-        "module": "ESNext",
-        "moduleResolution": "Node",
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react-jsx",
         "baseUrl": "."
     },
-    "include": ["**/*.ts", "**/*.tsx"],
-    "references": [{ "path": "./tsconfig.node.json" }]
+    "include": ["src"],
+    "exclude": ["node_modules", "dist", "rollup.config.js"]
 }
