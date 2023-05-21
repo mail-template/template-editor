@@ -1,8 +1,14 @@
 {
-    "plugins": ["@typescript-eslint", "react-refresh", "prefer-arrow"],
+    "plugins": [
+        "@typescript-eslint",
+        "react-refresh",
+        "prefer-arrow"
+    ],
     "parserOptions": {
         "tsconfigRootDir": "./",
-        "project": ["./tsconfig.json"]
+        "project": [
+            "./tsconfig.json"
+        ]
     },
     "rules": {
         "react-refresh/only-export-components": "error",
@@ -15,7 +21,10 @@
                 "ignoreReadBeforeAssign": false
             }
         ],
-        "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+        "@typescript-eslint/consistent-type-definitions": [
+            "error",
+            "interface"
+        ],
         "@typescript-eslint/consistent-type-exports": "error",
         "@typescript-eslint/consistent-type-imports": "warn",
         "@typescript-eslint/no-namespace": "off",
@@ -28,12 +37,38 @@
             }
         ],
         "no-nested-ternary": "error",
-        "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
-        "func-style": ["error", "expression", { "allowArrowFunctions": true }],
-        "no-multi-spaces": ["error"],
-        "eol-last": ["error", "always"],
-        "no-multiple-empty-lines": ["warn", { "max": 1 }],
-        "import/no-anonymous-default-export": "on"
+        "prefer-arrow-callback": [
+            "error",
+            {
+                "allowNamedFunctions": true
+            }
+        ],
+        "func-style": [
+            "error",
+            "expression",
+            {
+                "allowArrowFunctions": true
+            }
+        ],
+        "no-multi-spaces": [
+            "error"
+        ],
+        "eol-last": [
+            "error",
+            "always"
+        ],
+        "no-multiple-empty-lines": [
+            "warn",
+            {
+                "max": 1
+            }
+        ]
     },
-    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier", "react-app"]
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "react-app",
+        "plugin:storybook/recommended"
+    ]
 }
