@@ -1,15 +1,18 @@
-import type { Preview } from '@storybook/react';
+import { INITIAL_VIEWPORTS, DEFAULT_VIEWPORT } from '@storybook/addon-viewport';
 
-const preview: Preview = {
-    parameters: {
-        actions: { argTypesRegex: '^on[A-Z].*' },
-        controls: {
-            matchers: {
-                color: /(background|color)$/i,
-                date: /Date$/,
-            },
+export const preview = {
+    layout: 'fullscreen',
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    viewport: {
+        defaultViewport: DEFAULT_VIEWPORT,
+        viewports: INITIAL_VIEWPORTS,
+    },
+    options: {
+        storySort: {
+            order: [
+                // https://storybook.js.org/docs/react/writing-stories/naming-components-and-hierarchy
+                '*',
+            ],
         },
     },
 };
-
-export default preview;
