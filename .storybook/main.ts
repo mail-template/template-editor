@@ -1,7 +1,13 @@
-const config = {
-    core: {
-        // https://storybook.js.org/docs/react/builders/vite
-        builder: '',
+import type { StorybookConfig } from '@storybook/react-vite';
+
+/**
+ * Storybook API Builder configuration
+ * @see https://storybook.js.org/docs/react/builders/vite
+ */
+const config: StorybookConfig = {
+    framework: {
+        name: '@storybook/react-vite',
+        options: {},
     },
     stories: ['../src/**/*.stories.@(ts|tsx)', '../src/**/*.stories.mdx'],
     addons: [
@@ -10,10 +16,9 @@ const config = {
         '@storybook/addon-links',
         '@storybook/addon-actions',
     ],
-
-    docs: {
-        autodocs: 'tag',
+    typescript: {
+        reactDocgen: 'react-docgen',
     },
 };
 
-module.exports = config;
+export default config;
