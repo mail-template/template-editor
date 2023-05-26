@@ -1,11 +1,10 @@
 {
-    "plugins": ["@typescript-eslint", "react-refresh", "prefer-arrow"],
+    "plugins": ["@typescript-eslint", "prefer-arrow"],
     "parserOptions": {
         "tsconfigRootDir": "./",
         "project": ["./tsconfig.json"]
     },
     "rules": {
-        "react-refresh/only-export-components": "error",
         "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/prefer-for-of": "warn",
         "prefer-const": [
@@ -28,12 +27,33 @@
             }
         ],
         "no-nested-ternary": "error",
-        "prefer-arrow-callback": ["error", { "allowNamedFunctions": true }],
-        "func-style": ["error", "expression", { "allowArrowFunctions": true }],
+        "prefer-arrow-callback": [
+            "error",
+            {
+                "allowNamedFunctions": true
+            }
+        ],
+        "func-style": [
+            "error",
+            "expression",
+            {
+                "allowArrowFunctions": true
+            }
+        ],
         "no-multi-spaces": ["error"],
         "eol-last": ["error", "always"],
-        "no-multiple-empty-lines": ["warn", { "max": 1 }],
-        "import/no-anonymous-default-export": "on"
+        "no-multiple-empty-lines": [
+            "warn",
+            {
+                "max": 1
+            }
+        ]
     },
-    "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier", "react-app"]
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "react-app",
+        "plugin:storybook/recommended"
+    ]
 }
